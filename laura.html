@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre "Navio Negreiro"</title>
+    <link rel="stylesheet" href="laura.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz sobre "Navio Negreiro"</h1>
+        </header>
+
+        <main class="quiz-container">
+            <div id="quiz">
+                <div class="question-section">
+                    <div class="question-image">
+                        <img id="question-img" src="" alt="Imagem da Pergunta">
+                    </div>
+                    <div class="question">
+                        <p id="question-text"></p>
+                    </div>
+                    <div class="options"></div>
+                </div>
+
+                <div id="result"></div>
+                <div id="score" style="display: none;">
+                    <p id="score-text">Sua pontuação é: <span id="score-value">0</span></p>
+                </div>
+
+                <div class="navigation">
+                    <button id="next-button" onclick="nextQuestion()" style="display: none;">Próxima Pergunta</button>
+                </div>
+            </div>
+            <button onclick="location.href = 'laura.html'">Reiniciar Quizz</button>
+        </main>
+
+        
+    </div>
+
+    <script src="laura.js"></script>
+</body>
+</html>

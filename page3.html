@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jogo da Forca</h1>
+        <div class="hangman">
+            <div class="gallows">
+                <div class="rope"></div>
+                <div class="horizontal-bar"></div>
+                <div class="vertical-bar"></div>
+            </div>
+            <div class="head" id="head" style="display: none;"></div>
+            <div class="body" id="body" style="display: none;"></div>
+            <div class="arms" id="arms" style="display: none;"></div>
+            <div class="legs" id="legs" style="display: none;"></div>
+        </div>
+        <p id="word">_ _ _ _ _</p>
+        <p id="message"></p>
+        <input type="text" id="letterInput" maxlength="1" />
+        <button onclick="guessLetter()">Adivinhar</button>
+        <p id="attempts">Tentativas restantes: <span id="attemptsLeft">15</span></p>
+        <p id="wrongLetters">Letras erradas: <span id="wrongLettersList"></span></p>
+        <p id="hint"></p> <!-- Adicionando a linha da dica -->
+        <button id="newRoundButton" onclick="startGame()" style="display: none;">Nova Rodada</button>
+    </div>
+    <div id="score" style="display: none;">
+        <p id="score-text">Sua pontuação é: <span id="score-value">0</span></p>
+    </div>
+    <script src="page3.js"></script>
+</body>
+</html>

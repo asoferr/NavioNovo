@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche a altura da tela */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff6f61;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6f61;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-container {
+    padding: 1.5rem;
+}
+
+.question-section {
+    margin-bottom: 2rem;
+}
+
+.question-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option {
+    background: linear-gradient(135deg, #ff6f61, #ffcc70);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: left;
+    transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.option:hover {
+    background: linear-gradient(135deg, #ffcc70, #ff6f61);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.option:active {
+    transform: scale(0.98);
+}
+
+.option:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 60%;
+    background: #fff;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.navigation {
+    margin-top: 2rem;
+}
+
+#next-button {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#next-button:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#next-button:active {
+    transform: scale(0.98);
+}
+
+footer {
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.875rem;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-image img {
+    width: 400px ; /* Define uma largura fixa de 200 pixels */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove qualquer espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Permite definir largura e altura */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 10px 2px; /* Margem ao redor do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+}
+
+button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Move o botão para cima */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+button:active {
+    transform: translateY(0); /* Retorna ao lugar ao clicar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Retorna a sombra */
+}

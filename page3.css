@@ -1,0 +1,143 @@
+/* Estilos globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container do jogo */
+.game-container {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 70%);
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elemento decorativo animado */
+.game-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 140%;
+    height: 140%;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.5), rgba(255, 215, 0, 0.5));
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    color: #ff6f61; /* Cor do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da palavra */
+#word {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Estilo da mensagem */
+#message {
+    color: #4caf50; /* Cor da mensagem */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do input */
+#letterInput {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    margin-right: 10px;
+    border: 2px solid #4caf50; /* Cor da borda */
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#letterInput:focus {
+    border-color: #ffeb3b; /* Cor da borda ao focar */
+    background-color: #ffeb3b; /* Cor de fundo ao focar */
+    color: #333;
+}
+
+/* Estilo do botão */
+button {
+    font-size: 1.4em;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Estilo das tentativas restantes */
+#attempts {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#attemptsLeft {
+    font-weight: bold;
+    color: #ffeb3b; /* Cor do texto */
+}
+
+#hint {
+    color: #ff6f61;
+}
+
+#wrongLetters {
+    color: #ff6f61;
+}
